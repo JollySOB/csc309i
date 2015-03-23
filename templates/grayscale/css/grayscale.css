@@ -366,7 +366,7 @@ body {
 
 #home {
 	position: relative;
-	right: 1150%;
+	right: 1050%;
 }
 
 /*TO DO: Fix these to be fluid values*/
@@ -490,5 +490,48 @@ position: relative;
 	position: relative;
 	right: 29%;
 }
+
+#browse_container{
+	display: block;
+	text-align: center;
+	position: relative;
+	top: 20%;
+}
+
+#browse_container form{
+	display: inline-block;
+	color: black;
+}
+
+#filter{
+	float: left;
+	margin-left: 15%;
+}
+
+#search{
+	text-align: center;
+}
+
+#sort{
+	float: right;
+	margin-right: 15%;
+}
+
+#browse_container form submit{
+	display: block;
+}
+
+#search_results{
+	text-align: center;
+	display: block;
+	margin-top: 10%;
+	padding-top: 1%;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-color: pink;
+}
+
+
+
 
 

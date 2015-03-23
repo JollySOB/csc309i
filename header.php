@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
 					<li>
-						<a id="home" class="page-scroll "href="index.php">Home</a>
+						<a id="home" class="page-scroll" href="index.php">Home</a>
 					</li>
 					<?php
 						session_start();
@@ -58,6 +58,9 @@
 								  </li>';
 						}
 					?>
+					<li>
+						<a class="page-scroll" href="browse.php">Browse</a>
+					</li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

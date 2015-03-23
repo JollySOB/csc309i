@@ -25,7 +25,7 @@ $category = $result['category'];
 	<form action="process_like.php" method="get">
 		<button type="submit" id="like" name="like" value="1">Like</button>
 		<button type="submit" id="dislike" name="like" value="0">Dislike</button>
-		<input type="hidden" name="id" value="<?=$_current_id?>">
+		<input type="hidden" name="id" value="<?=$current_id?>">
 	</form>
 	<?php
 		if (isset($_SESSION['email']) AND $result['creator'] == $_SESSION['email']) {

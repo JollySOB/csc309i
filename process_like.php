@@ -1,12 +1,12 @@
 <?php
 require_once("library.php");
 session_start();
-	
+echo var_dump($_GET['id']);
 if (isset($_SESSION['email'])) {
 
 	try {
 		$db = connect_db();
-		$update_user_vote_status = $db->prepare("INSERT INTO user_votes VALUES(?, ?, DEFAULT)");
+		$update_user_vote_status = $db->prepare("INSERT INTO user_votes VALUES(?, ?)");
 		$update_user_vote_status->execute(array($_SESSION['email'], $_GET['id']));
 	}
 
