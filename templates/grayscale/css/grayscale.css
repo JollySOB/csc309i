@@ -531,6 +531,11 @@ position: relative;
 	border-top-color: pink;
 }
 
+#search_results li, #search_results li a{
+	list-style: none;
+	font-size: xx-large;
+	color: green;
+}
 
 
 
