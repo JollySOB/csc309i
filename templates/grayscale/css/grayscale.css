@@ -366,10 +366,13 @@ body {
 
 #home {
 	position: relative;
-	right: 1050%;
+	right: 950%;
 }
 
-/*TO DO: Fix these to be fluid values*/
+/*
+TO DO: Fix these to be fluid values
+TO DO: Put all of the styling for all idea links into a single class.
+*/
 .intro_content{
 	position: relative;
 	top: 175px;
@@ -537,6 +540,18 @@ position: relative;
 	color: green;
 }
 
+#top_ideas{
+	text-align: center;
+	position: relative;
+	top: 50%;
+	border-top-style: solid;
+	border-top-width: medium;
+	border-top-width: pink;
+}
 
+#top_ideas #date_field{
+	color: black;
+	width: 18%;
+}
 
 

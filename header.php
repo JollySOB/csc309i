@@ -47,6 +47,9 @@
 								 </li>
 								 <li>
 									<a class="page-scroll" href="profile.php">My Profile</a>
+								 </li>
+								 <li>
+									<a class="page-scroll" href="stats.php">Stats</a>
 								 </li>';
 						}
 						else {
