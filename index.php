@@ -1,5 +1,7 @@
 
-<?php include("header.php");?>
+<?php 
+include("header.php");
+?>
 
     <!-- Intro Header -->
     <header class="intro">

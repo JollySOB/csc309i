@@ -34,13 +34,4 @@ function search($search_type, $query) {
 	$result_set = $statement->fetchAll(PDO::FETCH_ASSOC);
 	return $result_set;
 }
-
-function top_5($date_start, $date_end, $rank) {
-	$db = connect_db();
-	
-	$statement = $db->prepare("SELECT id, title FROM ideas WHERE created >= ? AND created <= ? ORDER BY score DESC LIMIT ?");
-	$statement->execute(array($date_start, $date_end, $rank));
-	$result_set = $statement->fetchAll(PDO::FETCH_ASSOC);
-	return $result_set;
-}
 ?>
