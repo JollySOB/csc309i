@@ -73,7 +73,7 @@
 		}
 	}
 	
-	catch {Exception $e) {
+	catch (Exception $e) {
 	
 		if ($e->getCode == 42000) {
 			
@@ -103,6 +103,7 @@
 				<li>
 					<a href="idea.php?id=<?=$value?>"><?=$key?></a>
 				</li>
+				</br>
 		<?php
 				}
 			}

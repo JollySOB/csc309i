@@ -381,7 +381,7 @@ TO DO: Put all of the styling for all idea links into a single class.
 }
 
 .form_container{
-	background-color: purple;
+	background-color: #C1C1CC;
 	width: 50%;
 	height: 50%;
 	margin: auto;
@@ -435,7 +435,9 @@ TO DO: Put all of the styling for all idea links into a single class.
 	margin-top: 2%;
 }
 
-.idea {
+#profile_ideas ul{
+	text-align: center;
+	padding-left: 0;
 	list-style: none;
 }
 
@@ -542,8 +544,12 @@ position: relative;
 	margin-top: 2%;
 }
 
-#search_results li, #search_results li a{
+#search_results ul{
 	list-style: none;
+	padding-left: 0;
+}
+
+#search_results li a{
 	font-size: xx-large;
 	color: green;
 }
@@ -555,6 +561,17 @@ position: relative;
 	border-top-style: solid;
 	border-top-width: medium;
 	border-top-color: green;
+}
+
+#top_ideas ul {
+	text-align: center;
+	list-style: none;
+	padding-left: 0;
+}
+
+#top_ideas li a{
+	font-size: xx-large;
+	color: purple;
 }
 
 #top_ideas h4{

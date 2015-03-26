@@ -13,7 +13,7 @@
 			$search_results = search($search_type, $_GET['sort_flag']);
 		}
 		
-		else {
+		else if ($_GET['search_query'] != '') {
 			$search_results = search($search_type, $_GET['search_query']);
 		}
 	}
