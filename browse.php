@@ -1,4 +1,5 @@
 <?php
+//TODO: fix the fact that searching the empty string returns a lot of stuff
 	include("header.php");
 	require("library.php");
 	

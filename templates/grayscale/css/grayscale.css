@@ -431,6 +431,10 @@ TO DO: Put all of the styling for all idea links into a single class.
 	margin-top: 1%;
 }
 
+#profile_ideas h3{
+	margin-top: 2%;
+}
+
 .idea {
 	list-style: none;
 }
@@ -534,6 +538,10 @@ position: relative;
 	border-top-color: pink;
 }
 
+#search_results h3{
+	margin-top: 2%;
+}
+
 #search_results li, #search_results li a{
 	list-style: none;
 	font-size: xx-large;
@@ -546,7 +554,11 @@ position: relative;
 	top: 50%;
 	border-top-style: solid;
 	border-top-width: medium;
-	border-top-width: pink;
+	border-top-color: green;
+}
+
+#top_ideas h4{
+	margin-top: 2%;
 }
 
 #top_ideas #date_field{
@@ -554,4 +566,9 @@ position: relative;
 	width: 18%;
 }
 
+#graph{
+	text-align: center;
+	margin-top: 5%;
+	margin-bottom: -22%;
+}
 

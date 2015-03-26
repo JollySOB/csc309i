@@ -34,4 +34,12 @@ function search($search_type, $query) {
 	$result_set = $statement->fetchAll(PDO::FETCH_ASSOC);
 	return $result_set;
 }
+
+function report_error($e) {
+	echo $e->getMessage();
+	echo $e->getCode();
+	echo "Stack Trace:<br>";
+	var_dump($e->getTrace());
+	exit;
+}
 ?>

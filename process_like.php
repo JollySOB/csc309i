@@ -15,6 +15,9 @@ if (isset($_SESSION['email'])) {
 		header("Location: response_page.php?redirect=browse.php&message=Sorry, you've already voted on this idea. Try browsing to find another idea to vote on!");
 		exit;
 		}
+		else {
+			report_error($e);
+		}
 	}
 
 	if ($_GET['like'] == 1) {

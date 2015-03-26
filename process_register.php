@@ -30,6 +30,10 @@
 			header("Location: response_page.php?redirect=register.php&message=Sorry, the email you have provided has already been registered. Please try again with a different email address.");
 			exit;
 		}
+		
+		else {
+			report_error($e);
+		}
 	}
 	
 	header("Location: process_login.php?email=$email&password=$password");

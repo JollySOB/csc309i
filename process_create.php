@@ -14,10 +14,7 @@ try {
 }
 
 catch (Exception $e) {
-		echo $e->getMessage();
-		echo "Stack Trace:<br>";
-		var_dump($e->getTrace());
-		exit;
+		report_error($e);
 }
 
 header("Location: idea.php?id=$current_id");
