@@ -11,6 +11,23 @@ function find_top_k_ideas($date_start, $date_end, $k) {
 	return $result_set;
 }
 
+
+
+//Determine the distribution of ideas by category and send the graph data in JSON format
+if (!isset($_GET['start_date'])) {
+	$db = connect_db();
+	$results = $db->query("SELECT category, COUNT(*) FROM ideas GROUP BY category");
+	$graph_data = "{";
+	foreach($results as $row) {
+		$graph_data = $graph_data . "\"" . $row['category'] . "\":" . $row['COUNT(*)'] . ",";
+	}
+	$graph_data = substr($graph_data, 0, strlen($graph_data) - 1);
+	$graph_data = $graph_data . "}";
+	header("Content-Type: JSON");
+	echo $graph_data;
+}
+
+//Client is requesting top k ideas
 if (isset($_GET['start_date'])) {
 	$top_k_ideas = find_top_k_ideas($_GET['start_date'], $_GET['end_date'], $_GET['limit']);
 	$response = "{";
@@ -19,8 +36,10 @@ if (isset($_GET['start_date'])) {
 	}
 	$response = substr($response, 0, strlen($response) - 1);
 	$response = $response . "}";
+
 	header("Content-Type: JSON");
 	echo $response;
-	//echo var_dump($top_k_ideas);
 }
+
+
 ?>

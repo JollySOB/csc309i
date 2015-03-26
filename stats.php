@@ -1,19 +1,39 @@
 <?php
 //TO DO: change the way the user provides input on client maybe to make it easier
 	include("header.php");
-	//TO DO: write try catch to capture when users don;t supply input with proper format
-	if (isset($_GET['request_parameter_string'])) {
-		//echo $_GET['request_parameter_string'];
-		$request_parameters = explode(' ', trim($_GET['request_parameter_string']));
-		//echo var_dump($request_parameters);
-		//Use the PHP curl library to send the request
+	require_once("assets/libchart/libchart/classes/libchart.php");
+	
+	try {
+	
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($curl, CURLOPT_URL, 'http://localhost/csc309i/api.php?start_date=' . $request_parameters[0] . '&end_date=' . $request_parameters[1] . '&limit=' . $request_parameters[2]);
-		$request_response = curl_exec($curl);
+		curl_setopt($curl, CURLOPT_URL, 'http://localhost/csc309i/api.php');
+		$request_response1 = curl_exec($curl);
 		curl_close($curl);
-		$request_results= json_decode($request_response, true);
-		//echo var_dump($request_results);
+		$request_results1 = json_decode($request_response1, true);
+		echo var_dump($request_results1);
+		
+		//Makes request of the api to find top_k_ideas using input from the page's HTML form.
+		if (isset($_GET['request_parameter_string'])) {
+			$request_parameters = explode(' ', trim($_GET['request_parameter_string']));
+			
+			//Set up and send the request
+			$curl = curl_init();
+			curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($curl, CURLOPT_URL, 'http://localhost/csc309i/api.php?start_date=' . $request_parameters[0] . '&end_date=' . $request_parameters[1] . '&limit=' . $request_parameters[2]);
+			$request_response2 = curl_exec($curl);
+			$request_results2 = json_decode($request_response2, true);
+			echo $request_response2;
+			echo var_dump($request_results2);
+			echo json_last_error_msg();
+			curl_close($curl);
+		}
+		
+		
+	}
+	
+	catch (Exception $e) {
+		
 	}
 ?>
 
@@ -26,8 +46,8 @@
 	</form>
 	<ul>
 		<?php
-			if (isset($request_results)) {
-				foreach($request_results as $key => $value) {
+			if (isset($request_results2)) {
+				foreach($request_results2 as $key => $value) {
 		?>
 				<li>
 					<a href="idea.php?id=<?=$value?>"><?=$key?></a>
