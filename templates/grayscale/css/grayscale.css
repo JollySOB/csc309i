@@ -340,7 +340,7 @@ footer p {
 
 ::-moz-selection {
     text-shadow: none;
-    background: #fcfcfc;
+    background: red;
     background: rgba(255,255,255,.2);
 }
 
@@ -365,14 +365,10 @@ body {
 /* CUSTOM CSS */
 
 #home {
-	position: relative;
-	right: 950%;
+	float: left;
 }
 
-/*
-TO DO: Fix these to be fluid values
-TO DO: Put all of the styling for all idea links into a single class.
-*/
+
 .intro_content{
 	position: relative;
 	top: 175px;
@@ -381,7 +377,6 @@ TO DO: Put all of the styling for all idea links into a single class.
 }
 
 .form_container{
-	background-color: #C1C1CC;
 	width: 50%;
 	height: 50%;
 	margin: auto;
@@ -394,10 +389,6 @@ TO DO: Put all of the styling for all idea links into a single class.
 
 .log_reg_form{
 	display: inline;
-	border-color: red;
-	border-style: solid;
-	border-width: thick;
-	background-color: yellow;
 	margin: auto;
 	position: relative;
 	top: 15%;
@@ -406,7 +397,7 @@ TO DO: Put all of the styling for all idea links into a single class.
 
 
 .log_reg_label{
-	color: silver;
+	color: white;
 }
 
 
@@ -414,7 +405,6 @@ TO DO: Put all of the styling for all idea links into a single class.
 	color: black;
 	border-style: solid;
 	border-width: medium;
-	border-color: pink;
 	width: 45%;
 }
 
@@ -551,7 +541,7 @@ position: relative;
 
 #search_results li a{
 	font-size: xx-large;
-	color: green;
+	color: red;
 }
 
 #top_ideas{
@@ -560,7 +550,7 @@ position: relative;
 	top: 50%;
 	border-top-style: solid;
 	border-top-width: medium;
-	border-top-color: green;
+	border-top-color: pink;
 }
 
 #top_ideas ul {

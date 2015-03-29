@@ -27,6 +27,7 @@ require_once("library.php");
 		<br>
 		<input type="text" name="keywords" id="keywords" placeholder="Enter space separated search tags for your idea."class="form_input">
 		<br>
+		<br>
 		<input type="submit" value="Create" class="btn">
 	</form>
 </div>

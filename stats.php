@@ -90,7 +90,7 @@
 </div>
 <div id="top_ideas">
 	<h4>Find the most popular start up ideas over any range of time!</h4>
-	<h6>Please use the input format shown in the box below, entering the start date first and the end date second</h6>
+	<h6>Please use the input format shown in the box below, entering the start date first, the end date second, and the number of ideas to return</h6>
 	<form action="stats.php" method="get">
 		<input type="text" name="request_parameter_string" id="date_field" placeholder="YYYY-MM-DD YYYY-MM-DD k">
 		<input type="submit" value="Search" class="btn">

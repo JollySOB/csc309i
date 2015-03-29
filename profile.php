@@ -10,7 +10,7 @@ $statement = $db->query("SELECT * FROM ideas WHERE creator = '$email'");
 
 <div id="profile_content">
 	<h1>Welcome back <?=$name?>!</h1>
-	<h2>Blah!</h2>
+	<p>Create a new start up idea! Or click on an idea below to edit or remove it!</p>
 	<a id="create_button" class="btn" href="create.php">Create</a>
 	<div id="profile_ideas">
 		<h3>My Startup Ideas</h3>

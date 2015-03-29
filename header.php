@@ -31,15 +31,15 @@
 	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar nav navbar-nav navbar-custom navbar-fixed-top" role="navigation">
+		<li id="home">
+			<a class="page-scroll" href="index.php">Home</a>
+		</li>
         <div class="container">
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-					<li>
-						<a id="home" class="page-scroll" href="index.php">Home</a>
-					</li>
 					<?php
 						session_start();
 						if (isset($_SESSION['logged_in'])) {
